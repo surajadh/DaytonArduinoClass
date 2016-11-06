@@ -9,7 +9,6 @@ const int pack1 = 6;
 const int pack2 = 7;
 const int pack3 = 8;
 unsigned long packMillis = 0;
-int intervalBetweenPacks = 2;
 
 void setup() {
   // initialize digital pin 13 as an output.
@@ -24,37 +23,32 @@ void setup() {
 
 // the loop function runs over and over again forever
 void loop() {
-  if(millis() - packMillis < 2) {
-    digitalWrite(2, HIGH);
-    digitalWrite(3, HIGH);
-    digitalWrite(4, HIGH);
-    digitalWrite(5, HIGH);
-    digitalWrite(6, LOW);
-    digitalWrite(7, HIGH);
-    digitalWrite(8, HIGH);  
-  }
-  else if(millis() - packMillis < 4) {
-    digitalWrite(2, HIGH);
-    digitalWrite(3, HIGH);
-    digitalWrite(4, LOW);
-    digitalWrite(5, LOW);
-    digitalWrite(6, HIGH);
-    digitalWrite(7, LOW);
-    digitalWrite(8, HIGH);
-  }
-  else if(millis() - packMillis < 6) {
-    digitalWrite(2, LOW);
-    digitalWrite(3, LOW);
-    digitalWrite(4, LOW);
-    digitalWrite(5, HIGH);
-    digitalWrite(6, HIGH);
-    digitalWrite(7, HIGH);
-    digitalWrite(8, LOW);
-  }
-  else if(millis() - packMillis > 6) {
-    packMillis = millis();
-    digitalWrite(6, HIGH);
-    digitalWrite(7, HIGH);
-    digitalWrite(8, HIGH);
-  }
+  // Lets turn bottom 5 LEDs ON
+  // Look at diagram to understand Pack 1, Pack 2 and Pack 3
+  // How many LEDs in Pack 1 would you like to turn ON
+  // Pack 1 block
+  // Use if condition here 
+  digitalWrite(led1, HIGH);
+  // .
+  // .
+  // .
+  // Send LOW in Pack 1 ground and HIGH in Pack 2 and Pack 3 grounds respectively
+  // Add delay of 1s for now to see how it will look
+  delay(1000);  
+
+  // How many LEDs in Pack 2 would you like to turn ON
+  // Pack 2 block
+  // .
+  // .
+  // .
+  digitalWrite(pack1, HIGH);
+  digitalWrite(pack2, LOW);
+  digitalWrite(pack1, HIGH);
+
+  delay(1000);
+
+  // Identify how many LEDs in Pack 3 would need to be on
+  
+  // Now keep on decreasing delay and find out what delay would make our eyes feel that all LEDs are ON
+  
 }
