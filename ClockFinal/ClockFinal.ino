@@ -2,8 +2,8 @@
 #include <TM1637Display.h>
 
 // Module connection pins (Digital Pins)
-#define CLK 4
-#define DIO 3
+#define CLK 6
+#define DIO 7
 
 unsigned long int currentTime;
 unsigned int seconds = 0;
