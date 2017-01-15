@@ -6,6 +6,9 @@
   This program will test the LCD panel and the buttons
   Mark Bramwell, July 2010
 
+  Modified the program to devlop a simple game
+  Suraj Adhikari, Jan 2017
+
 ********************************************************/
 
 // select the pins used on the LCD panel
